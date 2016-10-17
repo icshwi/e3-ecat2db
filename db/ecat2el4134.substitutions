@@ -1,0 +1,14 @@
+file ecat2el41xx.template
+{
+	pattern {CH_ID, PDO_IDX, EOFF, ESLO}
+		{$(MOD_ID)-AO1, 0, -10, 0.0003051804379339284}
+		{$(MOD_ID)-AO2, 1, -10, 0.0003051804379339284}
+		{$(MOD_ID)-AO3, 2, -10, 0.0003051804379339284}
+		{$(MOD_ID)-AO4, 3, -10, 0.0003051804379339284}
+}
+
+file ecat2slave.template
+{
+	pattern {DTYP}
+		{EL4134}
+}
