@@ -7,6 +7,6 @@ file ecat2ekxxxxID.template
 
 file ecat2slave.template
 {
-	pattern {DTYP}
+	pattern {DEVICENAME}
 		{EK1101}
 }

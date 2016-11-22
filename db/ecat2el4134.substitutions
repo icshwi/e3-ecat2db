@@ -9,6 +9,6 @@ file ecat2el41xx.template
 
 file ecat2slave.template
 {
-	pattern {DTYP}
+	pattern {DEVICENAME}
 		{EL4134}
 }

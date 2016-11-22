@@ -1,8 +1,9 @@
-record(stringin, "$(PREFIX):$(MOD_ID)-DTYP")
+record(stringin, "$(PREFIX):$(MOD_ID)-DEVNAME")
 {
 	field(DESC, "Module type (Not read from device)")
 	field(PINI, "YES")
-	field(VAL,  "$(DTYP)")
+	field(VAL,  "$(DEVICENAME)")
+	alias($(PREFIX):$(MOD_ID)-DTYP)
 }
 
 record(bi, "$(PREFIX):$(MOD_ID)-STATUS")
