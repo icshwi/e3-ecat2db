@@ -1,0 +1,84 @@
+# % macro, PREFIX, prefix name
+# % macro, CH_ID   channel identification
+# % macro, INDEX,  index mapping to asyn reason create by ecAsynInit. Same index as the physical numbering.
+# % macro, PORT,   asyn port for device
+# % macro, SCAN,   scan rate
+record(bi, "$(PREFIX):$(CH_ID)-URNG")
+{
+  field(DESC, "Under range")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e0")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bi, "$(PREFIX):$(CH_ID)-ORNG")
+{
+  field(DESC, "Over range")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e1")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(longin, "$(PREFIX):$(CH_ID)-LIM1")
+{
+  field(DESC, "Limit 1")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e2")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PREFIX):$(CH_ID)-LIM2")
+{
+  field(DESC, "Limit 2")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e3")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX):$(CH_ID)-ERR")
+{
+  field(DESC, "Error")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e4")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bi, "$(PREFIX):$(CH_ID)-TXPST")
+{
+  field(DESC, "TxPDO State")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e6")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bi, "$(PREFIX):$(CH_ID)-TXPTOG")
+{
+  field(DESC, "TxPDO Toggle")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e7")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(ai, "$(PREFIX):$(CH_ID)")
+{
+  field(DESC, "Analog input value")
+  field(DTYP, "ecat2")
+  field(INP,  "s$(SLAVE_IDX).sm3.p$(PDO_IDX).e8")
+  field(SCAN, "I/O Intr")
+  field(LINR, "SLOPE")
+#  field(ESLO, "$(ESLO=0.0000011920928955078125)")
+  field(ESLO, "$(ESLO=0.000000004656612873077392578)")
+  field(EGU,  "$(EGU=V)")
+  field(PREC, "$(PREC=7)")
+}
+
