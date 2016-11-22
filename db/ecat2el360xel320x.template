@@ -91,7 +91,7 @@ record(ai, "$(PREFIX):$(CH_ID)")
   field(LINR, "SLOPE")
   field(ESLO, "$(ESLO=1)")
   field(EOFF, "$(EOFF=0)")
-  field(EGU,  "$(EGU=V)")
-  field(PREC, "$(PREC=7)")
+  field(EGU,  "$(EGU=)")
+  field(PREC, "$(PREC=2)")
 }
 
