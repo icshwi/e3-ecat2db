@@ -1,0 +1,22 @@
+file ecat2slave.template
+{
+	pattern {DEVICENAME}
+		{EL3702}
+}
+
+file ecat2el370x.template
+{
+	pattern {CH_ID, SM_IDX}
+		{$(MOD_ID)-AI1, 0}
+		{$(MOD_ID)-AI2, 1}
+}
+
+file ecat2el370xsync.template
+{
+	pattern {NULL}
+		{NULL}
+}
+
+
+
+

@@ -1,0 +1,10 @@
+record(longin, "$(PREFIX):$(MOD_ID)-NXTLTCH")
+{
+        field(DESC, "Cycle count")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "ecat2")
+	field(INP, "s$(SLAVE_IDX).sm2.p1.e0")
+}
+
+
+

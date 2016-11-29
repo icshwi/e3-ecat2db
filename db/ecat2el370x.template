@@ -3,7 +3,7 @@ record(longin, "$(PREFIX):$(CH_ID)-CYCCNT")
         field(DESC, "Cycle count")
 	field(SCAN, "I/O Intr")
 	field(DTYP, "ecat2")
-	field(INP, "s$(SLAVE_IDX).sm$(SM_IDX).p0.e0")
+	field(INP, "s$(SLAVE_IDX).sm$(SM_IDX).p2.e0")
 }
 
 record(aai, "$(PREFIX):$(CH_ID)-DATA")
@@ -11,7 +11,8 @@ record(aai, "$(PREFIX):$(CH_ID)-DATA")
         field(DESC, "Over range")
 	field(SCAN, "I/O Intr")
 	field(DTYP, "ecat2")
-	field(INP, "s$(SLAVE_IDX).sm$(SM_IDX).p1.e0")
+	field(INP, "s$(SLAVE_IDX).sm$(SM_IDX).p3.e0")
+        field(FTVL, "SHORT")
         field(NELM, "100")
 }
 
